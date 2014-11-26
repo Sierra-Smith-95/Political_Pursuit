@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C83C036E-53BB-4776-AB53-FA6F6038D437</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Political Pursuit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3A5E2F4A193FE3EDCC3DB4446FC2F7152F3AAAB1</key>
+		<string>https://github.com/Sierra-Smith-95/Political_Pursuit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Political Pursuit.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3A5E2F4A193FE3EDCC3DB4446FC2F7152F3AAAB1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Sierra-Smith-95/Political_Pursuit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3A5E2F4A193FE3EDCC3DB4446FC2F7152F3AAAB1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3A5E2F4A193FE3EDCC3DB4446FC2F7152F3AAAB1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Political_Pursuit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
