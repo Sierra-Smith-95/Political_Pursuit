@@ -136,32 +136,35 @@
 
  #pragma mark - Navigation
  
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-     if ([segue.identifier isEqualToString:@"SignUpSegue"])  {
-         SignUp *signUpController = segue.destinationViewController;
-         signUpController.delegate = self;
-         signUpController.credentials = credentialsDictionary;
-     }
-     if ([segue.identifier isEqualToString:@"LogInSegue"])  {
-         UITabBarController *tabCont = segue.destinationViewController;
-         for (UIViewController *vc in tabCont.childViewControllers) {
-             if ([vc isKindOfClass:[Profile class]]) {
-                 Profile *profileVC = (Profile *)vc;
-                 profileVC.curPlayer = self.curPlayer;
-             }
-             else if ([vc isKindOfClass:[Trivia class]]) {
-                 UINavigationController *navCont = (UINavigationController *)vc;
-                 SecondViewController *secondVC = (SecondViewController *)[navCont parentViewController];
-                 secondVC.curPlayer = self.curPlayer;
-             }
-             else if ([vc isKindOfClass:[CalendarViewController class]]) {
-                 UINavigationController *navCont = (UINavigationController *)vc;
-                 CalendarViewController *calenderVC = (CalendarViewController *)[navCont parentViewController];
-                 calenderVC.curPlayer = self.curPlayer;
-             }
-         }
-     }
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SignUpSegue"])  {
+        SignUp *signUpController = segue.destinationViewController;
+        signUpController.delegate = self;
+        signUpController.credentials = credentialsDictionary;
+    }
+    if ([segue.identifier isEqualToString:@"LogInSegue"])  {
+        UITabBarController *tabCont = segue.destinationViewController;
+        for (UIViewController *v in tabCont.viewControllers) {
+            UIViewController *vc = v;
+            if ([v isKindOfClass:[UINavigationController class]]) {
+                UINavigationController *navCont = (UINavigationController *)v;
+                vc = [navCont.viewControllers objectAtIndex:0];
+            }
+            if ([vc isKindOfClass:[SecondViewController class]]) {
+                SecondViewController *secondVC = (SecondViewController *)vc;
+                secondVC.curPlayer = self.curPlayer;
+            }
+            if ([vc isKindOfClass:[Profile class]]) {
+                Profile *profileVC = (Profile *)vc;
+                profileVC.curPlayer = self.curPlayer;
+            }
+            if ([vc isKindOfClass:[CalendarViewController class]]) {
+                CalendarViewController *calVC = (CalendarViewController *)vc;
+                calVC.curPlayer = self.curPlayer;
+            }
+        }
+    }
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
  }

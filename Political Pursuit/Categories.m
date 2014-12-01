@@ -10,7 +10,7 @@
 #import "Trivia.h"
 
 @interface Categories ()
-
+@property (nonatomic) int selected;
 @end
 
 @implementation Categories
@@ -18,11 +18,13 @@
 -(IBAction)Button1:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] setInteger:Category1SelectedNumber forKey:@"CategorySaved"];
+    self.selected = 1;
 }
 
 -(IBAction)Button2:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] setInteger:Category2SelectedNumber forKey:@"CategorySaved"];
+    self.selected = 0;
 }
 
 -(IBAction)Exit:(id)sender{
@@ -70,6 +72,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     Trivia *triviaVC = (Trivia *)segue.destinationViewController;
     triviaVC.curPlayer = self.curPlayer;
+    if (self.selected == 1) triviaVC.catagory = @"Duke Politics";
+    else triviaVC.catagory = @"National Politics";
 }
 
 @end

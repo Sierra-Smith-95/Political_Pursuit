@@ -406,7 +406,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DRT-ao-HwA" kind="push" id="tnW-Kf-olX"/>
+                                    <action selector="NextQuestion:" destination="DRT-ao-HwA" eventType="touchUpInside" id="JRj-t3-ec7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ti-Yz-tdE">
@@ -438,6 +438,7 @@
                         <outlet property="Answer4" destination="Vdq-N9-Kie" id="tAp-4l-ZZQ"/>
                         <outlet property="CategorySelected" destination="SVz-Uw-I7i" id="gzC-SQ-RUs"/>
                         <outlet property="Exit" destination="7Ti-Yz-tdE" id="PWa-pV-OnT"/>
+                        <outlet property="NextQuestion" destination="Y1n-iw-yPI" id="I7v-sz-xmM"/>
                         <outlet property="QuestionText" destination="fP9-p7-uK7" id="oFV-pX-2hM"/>
                         <outlet property="Result" destination="7dp-pR-0h8" id="R8L-Xt-tqt"/>
                         <outlet property="Score" destination="SFS-Mu-vwg" id="mAA-O1-gqQ"/>
@@ -560,6 +561,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Kdf-zs-b3P">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Add an Event" id="g93-04-12C">
+                                    <barButtonItem key="leftBarButtonItem" title="Cancel" id="tCh-qo-3MX"/>
+                                    <barButtonItem key="rightBarButtonItem" title="Add" id="M02-j9-TEl"/>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <sections>
                             <tableViewSection headerTitle="Section-1" id="BtB-kX-OHH">
                                 <cells>

@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSString* option4;
 @property (nonatomic) int correctAns;
 
+//for correctAns, if it =1, then option1 is correct, etc...
+
 -(void) fromDict: (NSDictionary *) dict;
 
 @end

@@ -45,15 +45,13 @@ BOOL GameInProgress;
     NSMutableArray *dukeQuestions;
     int curIndex;
     
+    
 }
 
 -(IBAction)Answer1:(id)sender;
 -(IBAction)Answer2:(id)sender;
 -(IBAction)Answer3:(id)sender;
 -(IBAction)Answer4:(id)sender;
-
--(void)Category1;
--(void)Category2;
 
 -(void)RightAnswer;
 -(void)WrongAnswer;
@@ -63,5 +61,7 @@ BOOL GameInProgress;
 -(IBAction)Exit:(id)sender;
 
 @property (nonatomic, strong) Player *curPlayer;
+@property (nonatomic, strong) NSArray *questions;
+@property (nonatomic, strong) NSString *catagory;
 
 @end
