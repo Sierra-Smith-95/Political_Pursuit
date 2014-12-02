@@ -27,6 +27,8 @@
 		E15FC41F19DF0B12008C5CB4 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E15FC41E19DF0B12008C5CB4 /* Profile.m */; };
 		E15FC42219DF0D0C008C5CB4 /* SignUp.m in Sources */ = {isa = PBXBuildFile; fileRef = E15FC42119DF0D0C008C5CB4 /* SignUp.m */; };
 		E16259A51A09AF4600DC8FEC /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16259A41A09AF4600DC8FEC /* CalendarViewController.m */; };
+		E18D70F31A2D2ACD00412E09 /* Duke Welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = E18D70F21A2D2ACD00412E09 /* Duke Welcome.png */; };
+		E18D70F71A2D36FF00412E09 /* DemVRep.png in Resources */ = {isa = PBXBuildFile; fileRef = E18D70F61A2D36FF00412E09 /* DemVRep.png */; };
 		E1A8EF2019D0F41000EBD49B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A8EF1F19D0F41000EBD49B /* main.m */; };
 		E1A8EF2319D0F41000EBD49B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A8EF2219D0F41000EBD49B /* AppDelegate.m */; };
 		E1A8EF2619D0F41000EBD49B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A8EF2519D0F41000EBD49B /* FirstViewController.m */; };
@@ -78,6 +80,8 @@
 		E15FC42119DF0D0C008C5CB4 /* SignUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUp.m; path = ../SignUp.m; sourceTree = "<group>"; };
 		E16259A31A09AF4600DC8FEC /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = ../CalendarViewController.h; sourceTree = "<group>"; };
 		E16259A41A09AF4600DC8FEC /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarViewController.m; path = ../CalendarViewController.m; sourceTree = "<group>"; };
+		E18D70F21A2D2ACD00412E09 /* Duke Welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Duke Welcome.png"; sourceTree = "<group>"; };
+		E18D70F61A2D36FF00412E09 /* DemVRep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DemVRep.png; sourceTree = "<group>"; };
 		E1A8EF1A19D0F41000EBD49B /* Political Pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Political Pursuit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A8EF1E19D0F41000EBD49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A8EF1F19D0F41000EBD49B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		E1A8EF1D19D0F41000EBD49B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E18D70F21A2D2ACD00412E09 /* Duke Welcome.png */,
+				E18D70F61A2D36FF00412E09 /* DemVRep.png */,
 				E1A8EF1E19D0F41000EBD49B /* Info.plist */,
 				E1A8EF1F19D0F41000EBD49B /* main.m */,
 			);
@@ -318,6 +324,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18D70F31A2D2ACD00412E09 /* Duke Welcome.png in Resources */,
+				E18D70F71A2D36FF00412E09 /* DemVRep.png in Resources */,
 				E1A8EF2C19D0F41000EBD49B /* Main.storyboard in Resources */,
 				E1A8EF3119D0F41100EBD49B /* LaunchScreen.xib in Resources */,
 				E1A8EF2E19D0F41100EBD49B /* Images.xcassets in Resources */,
