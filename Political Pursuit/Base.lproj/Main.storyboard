@@ -889,7 +889,18 @@
                             <outlet property="delegate" destination="EBG-lM-ghh" id="uAX-Tj-3Bw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add an Event" id="x0C-c5-z3l"/>
+                    <navigationItem key="navigationItem" title="Add an Event" id="x0C-c5-z3l">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="MuL-e1-tlt">
+                            <connections>
+                                <action selector="cancelPressed:" destination="EBG-lM-ghh" id="Bew-VI-xcX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="Id6-b0-qTg">
+                            <connections>
+                                <action selector="addPressed:" destination="EBG-lM-ghh" id="fqr-tN-lAf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="5r2-uk-hxd" id="ywD-YS-7mJ"/>
                         <outlet property="endDateLabel" destination="7y6-fh-chU" id="jYT-1l-BRO"/>

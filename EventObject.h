@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface EventObject : NSObject
 
 @property (nonatomic, weak) NSString *title;
 @property (nonatomic, weak) NSString *location;
-@property (nonatomic, weak) NSDate *date;
+@property (nonatomic, weak) NSDate *startDate;
 @property (nonatomic, weak) NSString *details;
-@property (nonatomic) int duration;
+@property (nonatomic, weak) NSDate *endDate;
 
+-(PFObject *)eventToPFObj;
+-(id)initWithPFObj:(PFObject *)obj;
 @end

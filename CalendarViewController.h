@@ -12,7 +12,6 @@
 
 @interface CalendarViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *events;
 @property (nonatomic, strong) Player *curPlayer;
 
 @end

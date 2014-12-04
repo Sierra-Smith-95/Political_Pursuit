@@ -11,12 +11,15 @@
 
 @interface CalendarViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableview;
+@property (nonatomic, strong) UIRefreshControl *refresh;
+@property (nonatomic, strong) NSMutableArray *events;
 @end
 
 @implementation CalendarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.events = [[NSMutableArray alloc] init];
     
 //    if (self.curPlayer.calAdmin == YES) {
         [self.navigationController setNavigationBarHidden:NO animated:NO];
@@ -24,40 +27,37 @@
 //    else{
 //        [self.navigationController setNavigationBarHidden:YES animated:NO];
 //    }
+    UITableViewController *tableController = [[UITableViewController alloc]init];
+    tableController.view = self.tableview;
+    self.refresh = [[UIRefreshControl alloc] init];
+    [self.refresh addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventAllEvents];
+    tableController.refreshControl = self.refresh;
+    
+    [self loadData];
+}
+
+- (void)refreshTable {
+    [self.refresh beginRefreshing];
+    [self loadData];
+    [self.refresh endRefreshing];
+}
+
+- (void)loadData {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    //create events
+   CalendarViewController *__weak weakSelf = self;
     
-    EventObject *event1 = [[EventObject alloc]init];
-    event1.title = @"Political Debate";
-    event1.location = @"Sanford";
-    NSDate *newDate = [NSDate dateWithTimeInterval:20000.0 sinceDate:[NSDate date]];
-    event1.date = newDate;
-    event1.duration = 10;
-    
-    EventObject *event2 = [[EventObject alloc]init];
-    event2.title = @"Republican Debate";
-    event2.location = @"Sanford";
-    event2.date = [NSDate date];
-    event2.duration = 10;
-    
-    EventObject *event3 = [[EventObject alloc]init];
-    event3.title = @"Democrat Debate";
-    event3.location = @"Sanford";
-    event3.date = [NSDate date];
-    event3.duration = 10;
-    
-    [array addObject:event1];
-    [array addObject:event2];
-    [array addObject:event3];
-    
-    self.events = [array copy];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //doesn't work
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for (PFObject *object in objects) {
+            EventObject *thisEvent = [[EventObject alloc] initWithPFObj:object];
+            [array addObject:thisEvent];
+        }
+        CalendarViewController *strongSelf = weakSelf;
+        strongSelf.events = array;
+        [strongSelf.tableview reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,10 +82,11 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    EventObject *event = [self.events objectAtIndex:indexPath.row];
-    cell.textLabel.text = event.title;
-    cell.detailTextLabel.text = event.location;
-    //this could also be date/time
+    NSMutableArray *array = self.events;
+    EventObject *event = [array objectAtIndex:indexPath.row];
+    NSString *title = event.title;
+    [cell.textLabel setText:title];
+    [cell.detailTextLabel setText:event.location];
     
     return cell;
 }
