@@ -11,11 +11,11 @@
 
 @interface EventObject : NSObject
 
-@property (nonatomic, weak) NSString *title;
-@property (nonatomic, weak) NSString *location;
-@property (nonatomic, weak) NSDate *startDate;
-@property (nonatomic, weak) NSString *details;
-@property (nonatomic, weak) NSDate *endDate;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSDate *startDate;
+@property (nonatomic, strong) NSString *details;
+@property (nonatomic, strong) NSDate *endDate;
 
 -(PFObject *)eventToPFObj;
 -(id)initWithPFObj:(PFObject *)obj;

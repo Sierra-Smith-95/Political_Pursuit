@@ -12,7 +12,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "Profile.h"
 #import "Trivia.h"
-#import "CalendarViewController.h"
+#import "CalenderTableViewController.h"
 #import "SecondViewController.h"
 
 @interface SignUp ()
@@ -149,9 +149,9 @@
                 SecondViewController *secondVC = (SecondViewController *)[navCont parentViewController];
                 secondVC.curPlayer = self.curPlayer;
             }
-            else if ([vc isKindOfClass:[CalendarViewController class]]) {
+            else if ([vc isKindOfClass:[CalenderTableViewController class]]) {
                 UINavigationController *navCont = (UINavigationController *)vc;
-                CalendarViewController *calenderVC = (CalendarViewController *)[navCont parentViewController];
+                CalenderTableViewController *calenderVC = (CalenderTableViewController *)[navCont parentViewController];
                 calenderVC.curPlayer = self.curPlayer;
             }
         }

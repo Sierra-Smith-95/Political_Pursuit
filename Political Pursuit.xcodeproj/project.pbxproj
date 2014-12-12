@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661891CD1A34CFC400CA787E /* CalenderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 661891CC1A34CFC400CA787E /* CalenderTableViewController.m */; };
 		A60150B81A1940D000DC4ADF /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60150B71A1940D000DC4ADF /* AddEventViewController.m */; };
 		A61B3CAA1A099F2E00FABA83 /* EventObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A61B3CA91A099F2E00FABA83 /* EventObject.m */; };
 		A6DAAABE19E7367300C68900 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAABD19E7367300C68900 /* Player.m */; };
@@ -26,7 +27,6 @@
 		E1581A8C1A100F0F009EB179 /* CalendarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1581A8B1A100F0F009EB179 /* CalendarDetailViewController.m */; };
 		E15FC41F19DF0B12008C5CB4 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = E15FC41E19DF0B12008C5CB4 /* Profile.m */; };
 		E15FC42219DF0D0C008C5CB4 /* SignUp.m in Sources */ = {isa = PBXBuildFile; fileRef = E15FC42119DF0D0C008C5CB4 /* SignUp.m */; };
-		E16259A51A09AF4600DC8FEC /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16259A41A09AF4600DC8FEC /* CalendarViewController.m */; };
 		E18D70F31A2D2ACD00412E09 /* Duke Welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = E18D70F21A2D2ACD00412E09 /* Duke Welcome.png */; };
 		E18D70F71A2D36FF00412E09 /* DemVRep.png in Resources */ = {isa = PBXBuildFile; fileRef = E18D70F61A2D36FF00412E09 /* DemVRep.png */; };
 		E1A8EF2019D0F41000EBD49B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A8EF1F19D0F41000EBD49B /* main.m */; };
@@ -52,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		661891CB1A34CFC400CA787E /* CalenderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalenderTableViewController.h; sourceTree = "<group>"; };
+		661891CC1A34CFC400CA787E /* CalenderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalenderTableViewController.m; sourceTree = "<group>"; };
 		A60150B61A1940D000DC4ADF /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
 		A60150B71A1940D000DC4ADF /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		A61B3CA81A099F2E00FABA83 /* EventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventObject.h; path = ../EventObject.h; sourceTree = "<group>"; };
@@ -78,8 +80,6 @@
 		E15FC41E19DF0B12008C5CB4 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = ../Profile.m; sourceTree = "<group>"; };
 		E15FC42019DF0D0C008C5CB4 /* SignUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUp.h; path = ../SignUp.h; sourceTree = "<group>"; };
 		E15FC42119DF0D0C008C5CB4 /* SignUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUp.m; path = ../SignUp.m; sourceTree = "<group>"; };
-		E16259A31A09AF4600DC8FEC /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = ../CalendarViewController.h; sourceTree = "<group>"; };
-		E16259A41A09AF4600DC8FEC /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarViewController.m; path = ../CalendarViewController.m; sourceTree = "<group>"; };
 		E18D70F21A2D2ACD00412E09 /* Duke Welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Duke Welcome.png"; sourceTree = "<group>"; };
 		E18D70F61A2D36FF00412E09 /* DemVRep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DemVRep.png; sourceTree = "<group>"; };
 		E1A8EF1A19D0F41000EBD49B /* Political Pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Political Pursuit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +140,8 @@
 				A61B3CA91A099F2E00FABA83 /* EventObject.m */,
 				E1581A8A1A100F0F009EB179 /* CalendarDetailViewController.h */,
 				E1581A8B1A100F0F009EB179 /* CalendarDetailViewController.m */,
-				E16259A31A09AF4600DC8FEC /* CalendarViewController.h */,
-				E16259A41A09AF4600DC8FEC /* CalendarViewController.m */,
+				661891CB1A34CFC400CA787E /* CalenderTableViewController.h */,
+				661891CC1A34CFC400CA787E /* CalenderTableViewController.m */,
 				A60150B61A1940D000DC4ADF /* AddEventViewController.h */,
 				A60150B71A1940D000DC4ADF /* AddEventViewController.m */,
 			);
@@ -348,12 +348,12 @@
 			files = (
 				E1A8EF2919D0F41000EBD49B /* SecondViewController.m in Sources */,
 				A60150B81A1940D000DC4ADF /* AddEventViewController.m in Sources */,
+				661891CD1A34CFC400CA787E /* CalenderTableViewController.m in Sources */,
 				A61B3CAA1A099F2E00FABA83 /* EventObject.m in Sources */,
 				E1A8EF2319D0F41000EBD49B /* AppDelegate.m in Sources */,
 				E1A8EF2619D0F41000EBD49B /* FirstViewController.m in Sources */,
 				E1A8EF4E19D1011F00EBD49B /* Categories.m in Sources */,
 				A6DAAABE19E7367300C68900 /* Player.m in Sources */,
-				E16259A51A09AF4600DC8FEC /* CalendarViewController.m in Sources */,
 				E1581A8C1A100F0F009EB179 /* CalendarDetailViewController.m in Sources */,
 				E1A8EF5419D11E5400EBD49B /* Trivia.m in Sources */,
 				A6E224871A06CB4E00DE7F39 /* TriviaQuestion.m in Sources */,

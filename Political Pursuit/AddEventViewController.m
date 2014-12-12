@@ -5,6 +5,7 @@
 //  Created by Sierra Smith on 11/16/14.
 //  Copyright (c) 2014 Political Pursuit. All rights reserved.
 //
+//
 
 #import "AddEventViewController.h"
 #import "EventObject.h"
@@ -54,10 +55,11 @@
     NSDate *endDate = [NSDate date];
     endDate = [self dateRoundedUpTo75Minutes:endDate];
     [self.endDatePicker setDate:endDate animated:YES];
+    [self.endDatePicker setMinimumDate:[self.startDatePicker date]];
     
     
-    [self.eventStartLabel setText:[self.dateFormatter stringFromDate:[self.startDatePicker date]]];
-    [self.endDateLabel setText:[self.dateFormatter stringFromDate:[self.endDatePicker date]]];
+    [self.eventStartLabel setText:[NSString stringWithFormat:@"Start: %@", [self.dateFormatter stringFromDate:[self.startDatePicker date]]]];
+    [self.endDateLabel setText:[NSString stringWithFormat:@"End: %@", [self.dateFormatter stringFromDate:[self.endDatePicker date]]]];
 }
 
 - (NSDate *) dateRoundedUpTo15Minutes:(NSDate *)dt{
@@ -92,11 +94,13 @@
 }
 
 - (IBAction)startValueChanged:(id)sender {
-    [self.eventStartLabel setText:[self.dateFormatter stringFromDate:[self.startDatePicker date]]];
+    [self.eventStartLabel setText:[NSString stringWithFormat:@"Start: %@", [self.dateFormatter stringFromDate:[self.startDatePicker date]]]];
+    [self.endDatePicker setMinimumDate:[[self.startDatePicker date] dateByAddingTimeInterval:60*60]];
+    [self.endDateLabel setText:[NSString stringWithFormat:@"End: %@", [self.dateFormatter stringFromDate:[self.endDatePicker date]]]];
 }
 
 - (IBAction)endValueChanged:(id)sender {
-    [self.endDateLabel setText:[self.dateFormatter stringFromDate:[self.endDatePicker date]]];
+    [self.endDateLabel setText:[NSString stringWithFormat:@"End: %@", [self.dateFormatter stringFromDate:[self.endDatePicker date]]]];
 }
 
 #pragma mark - UITextView and Field Events

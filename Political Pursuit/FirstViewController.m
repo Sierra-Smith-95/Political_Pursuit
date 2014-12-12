@@ -12,7 +12,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "Profile.h"
 #import "Trivia.h"
-#import "CalendarViewController.h"
+#import "CalenderTableViewController.h"
 #import "SecondViewController.h"
 
 
@@ -159,8 +159,8 @@
                 Profile *profileVC = (Profile *)vc;
                 profileVC.curPlayer = self.curPlayer;
             }
-            if ([vc isKindOfClass:[CalendarViewController class]]) {
-                CalendarViewController *calVC = (CalendarViewController *)vc;
+            if ([vc isKindOfClass:[CalenderTableViewController class]]) {
+                CalenderTableViewController *calVC = (CalenderTableViewController *)vc;
                 calVC.curPlayer = self.curPlayer;
             }
         }
