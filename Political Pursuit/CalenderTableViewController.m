@@ -20,12 +20,12 @@
     [super viewDidLoad];
     self.events = [[NSMutableArray alloc] init];
     
-//    if (self.curPlayer.calAdmin == YES) {
+    if (self.curPlayer.calAdmin == YES) {
         [self.navigationController setNavigationBarHidden:NO animated:NO];
-//    }
-//    else {
-//        [self.navigationController setNavigationBarHidden:YES animated:NO];
-//    }
+    }
+    else {
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventAllEvents];

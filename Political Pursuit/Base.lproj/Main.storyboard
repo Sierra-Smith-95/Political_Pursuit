@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5Lm-rY-TX2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5Lm-rY-TX2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -186,6 +186,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="LhQ-cC-hD5"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="passwordField" destination="pwx-gc-c7C" id="G54-P5-c3S"/>
                         <outlet property="userNameField" destination="Xgq-V6-pIg" id="dJf-7N-TaO"/>
@@ -196,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="-450" y="0.0"/>
         </scene>
-        <!--Profile-->
+        <!--Username-->
         <scene sceneID="o3Q-PZ-Yce">
             <objects>
                 <viewController id="Xlg-pU-rb4" customClass="Profile" sceneMemberID="viewController">
@@ -208,8 +209,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxq-3N-2bX">
+                                <rect key="frame" x="28" y="82" width="50" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-CO-nbV">
+                                <rect key="frame" x="86" y="84" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-KG-RU8">
+                                <rect key="frame" x="0.0" y="479" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.37647058823529411" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Admin Permissions">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvr-j3-zq8">
-                                <rect key="frame" x="248" y="481" width="56" height="30"/>
+                                <rect key="frame" x="160" y="479" width="160" height="40.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -217,37 +240,18 @@
                                     <action selector="LogOut:" destination="Xlg-pU-rb4" eventType="touchUpInside" id="4ga-T7-9yy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-ZA-v1J">
-                                <rect key="frame" x="78" y="28" width="165" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxq-3N-2bX">
-                                <rect key="frame" x="39" y="57" width="50" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-CO-nbV">
-                                <rect key="frame" x="97" y="59" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="Ipt-P7-mWa"/>
+                    <navigationItem key="navigationItem" title="Username" id="KKO-ie-1VM"/>
                     <connections>
                         <outlet property="LogOut" destination="Vvr-j3-zq8" id="O7S-B1-Uur"/>
                         <outlet property="pointsLabel" destination="jMj-CO-nbV" id="9ti-eM-F52"/>
-                        <outlet property="userNameLabel" destination="CbU-ZA-v1J" id="fhR-Q2-6R4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcH-ZV-aWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="-660"/>
+            <point key="canvasLocation" x="968" y="-660"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -558,7 +562,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9Kc-Qa-vnX" kind="relationship" relationship="viewControllers" id="MTJ-QK-GGN"/>
-                        <segue destination="Xlg-pU-rb4" kind="relationship" relationship="viewControllers" id="X6c-YT-ZyN"/>
+                        <segue destination="Q7E-MI-5XQ" kind="relationship" relationship="viewControllers" id="X6c-YT-ZyN"/>
                         <segue destination="TjR-sC-oLG" kind="relationship" relationship="viewControllers" id="Pgu-RF-qew"/>
                     </connections>
                 </tabBarController>
@@ -985,7 +989,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xM5-zl-ZbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="-660"/>
+            <point key="canvasLocation" x="2234" y="-660"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0P8-mM-WCf">
@@ -1003,7 +1007,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuX-Mk-pdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="-660"/>
+            <point key="canvasLocation" x="1824" y="-660"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="MEw-wl-VvG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q7E-MI-5XQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="Ipt-P7-mWa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CZf-kA-LVa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xlg-pU-rb4" kind="relationship" relationship="rootViewController" id="a2I-L4-xnl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnd-U1-eE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="-660"/>
         </scene>
     </scenes>
     <resources>
@@ -1019,7 +1042,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="NFk-Q9-o3Q"/>
-        <segue reference="kJT-PV-vXx"/>
+        <segue reference="Yix-jH-GiB"/>
         <segue reference="oaK-F0-agq"/>
     </inferredMetricsTieBreakers>
 </document>

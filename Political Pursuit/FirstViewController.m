@@ -48,6 +48,8 @@
             thisPlayer.password = password;
             thisPlayer.score = [[object objectForKey:@"score"] integerValue];
             thisPlayer.myID = object.objectId;
+            thisPlayer.calAdmin = [[object objectForKey:@"calAdmin"] boolValue];
+            thisPlayer.triviaAdmin = [[object objectForKey:@"triviaAdmin"] boolValue];
             
             [playerArray addObject:thisPlayer];
         }
