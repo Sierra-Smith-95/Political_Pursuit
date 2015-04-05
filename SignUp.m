@@ -37,7 +37,7 @@
     bool makeAccount = true;
     
     for (NSString *key in [self.credentials allKeys]) {
-        if ([key isEqualToString:_enterUsername.text]) {
+        if ([key isEqualToString: self.enterUsername.text]) {
             uniqueUser = false;
             break;
         }
@@ -47,21 +47,21 @@
         makeAccount = false;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Username Taken" message:@"This username is already in use.  Please choose another." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alert show];
-    }
-    
-    //check passwords are the same
-    if ([_enterPassword.text isEqualToString:_retypePassword.text]) {
-        //then add to a dictionary
-        newDictionary= [[NSMutableDictionary alloc] initWithObjects:[NSArray arrayWithObjects: _enterPassword.text, nil] forKeys:[NSArray arrayWithObjects: _enterUsername.text, nil]];
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Account Created" message:@"You're account has been made. Welcome!" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-        [alert show];
-    }
-    else {
-        makeAccount = false;
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Don't Match" message:@"The two entered passwords do not match" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-        [alert show];
-        return;
+    } else {
+        if ([_enterPassword.text isEqualToString:_retypePassword.text]) {
+            //then add to a dictionary
+            newDictionary= [[NSMutableDictionary alloc] initWithObjects:[NSArray arrayWithObjects: _enterPassword.text, nil] forKeys:[NSArray arrayWithObjects: _enterUsername.text, nil]];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Account Created" message:@"You're account has been made. Welcome!" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [alert show];
+        }
+        else {
+            makeAccount = false;
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Don't Match" message:@"The two entered passwords do not match" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+
     }
     
     if (makeAccount) {
@@ -69,6 +69,8 @@
         newUser.score = 0;
         newUser.username = _enterUsername.text;
         newUser.password = [self sha1:_enterPassword.text];
+        newUser.calAdmin = false;
+        newUser.triviaAdmin = false;
         
         //call the method in firstViewController to add new user
         [self.delegate addAccount:newUser];
@@ -77,8 +79,8 @@
         player[@"score"] = @0;
         player[@"userName"] = newUser.username;
         player[@"password"] = newUser.password;
-        player[@"calAdmin"] = @NO;
-        player[@"triviaAdmin"] = @NO;
+        player[@"calAdmin"] = [NSNumber numberWithBool:newUser.calAdmin];
+        player[@"triviaAdmin"] = [NSNumber numberWithBool: newUser.triviaAdmin];
         [player saveInBackground];
         
         newUser.myID = player.objectId;

@@ -10,7 +10,6 @@
 #import <Parse/Parse.h>
 
 @interface Profile ()
-@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 @end
@@ -18,13 +17,13 @@
 @implementation Profile
 
 -(IBAction)LogOut:(id)sender{
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.userNameLabel.text = self.curPlayer.username;
+    [self.navigationItem setTitle:self.curPlayer.username];
     self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.curPlayer.score];
 }
 
